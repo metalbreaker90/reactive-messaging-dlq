@@ -57,9 +57,9 @@ jobs:
       - run:
           name: Create Docker Image
           command: docker build -f src/main/docker/Dockerfile.native -t metalbreaker90/reactive-messaging-dlq .
-      #      - run:
-      #          name: Docker Hub login
-      #          command: docker login -u="${DOCKER_HUB_USERNAME}" -p="${DOCKER_HUB_PASSWORD}"
+      - run:
+          name: Docker Hub login
+          command: docker login -u="${DOCKER_HUB_USERNAME}" -p="${DOCKER_HUB_PASSWORD}"
       - run:
           name: Push image on DockerHub
           command: docker push metalbreaker90/reactive-messaging-dlq
