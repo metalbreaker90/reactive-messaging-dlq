@@ -56,7 +56,7 @@ jobs:
           no_output_timeout: 30m
       - run:
           name: Create Docker Image
-          command: docker build -f src/main/docker/Dockerfile.native -t metalbreaker90/circleci-quarkus-test .
+          command: docker build -f src/main/docker/Dockerfile.native -t metalbreaker90/reactive-messaging-dlq .
       #      - run:
       #          name: Docker Hub login
       #          command: docker login -u="${DOCKER_HUB_USERNAME}" -p="${DOCKER_HUB_PASSWORD}"
